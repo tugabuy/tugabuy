@@ -131,7 +131,7 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .center-logo img {
+    .fixed-logo img {
         width: 120px;
     }
 }
