@@ -1,64 +1,66 @@
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-header {
+.fixed-logo {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    text-align: center;
-    padding: 10px 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    transition: opacity 0.3s;
     z-index: 1000;
 }
 
-#logo {
-    height: 50px;
-}
-
-main {
-    margin-top: 80px;
-    text-align: center;
-    padding: 20px;
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+.fixed-logo img {
     width: 100%;
-    background-color: #f8f8f8;
-    text-align: center;
-    padding: 20px 0;
 }
 
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
+.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1100;
 }
 
-.footer-section h4 {
-    margin-bottom: 10px;
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #111;
+    color: white;
+    transition: left 0.3s;
+    padding-top: 60px;
 }
 
-.footer-section ul {
+.sidebar.show {
+    left: 0;
+}
+
+.menu {
     list-style: none;
     padding: 0;
 }
 
-.footer-section ul li a {
-    text-decoration: none;
-    color: black;
+.menu li {
+    padding: 10px;
 }
 
-.footer-section ul li a:hover {
-    text-decoration: underline;
+.menu a {
+    color: white;
+    text-decoration: none;
 }
