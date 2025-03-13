@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PortugalBuy</title>
+    <title>Tugabuy</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
 
-    <!-- MENU LATERAL -->
+    <!-- Menu Hambúrguer -->
     <div class="sidebar">
-        <img src="images/logo.png" alt="Logo PortugalBuy" class="logo-sidebar">
+        <div class="menu-header">
+            <img src="images/logo.png" alt="Tugabuy Logo" class="menu-logo">
+            <button id="menu-toggle">☰</button>
+        </div>
         <nav>
             <ul>
                 <li><a href="#">Coleções</a></li>
@@ -22,37 +24,26 @@
         </nav>
     </div>
 
-    <!-- CONTEÚDO PRINCIPAL -->
-    <div class="content">
-        <img src="images/logo.png" alt="Logo PortugalBuy" class="logo-central">
-        <h1>Luxo. Exclusividade. Estilo.</h1>
-        <p>Descobre as melhores peças de luxo no PortugalBuy.</p>
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Logo Central -->
+        <div class="logo-central">
+            <img src="images/logo.png" alt="Tugabuy Logo">
+        </div>
 
-        <section>
-            <h2>Coleções</h2>
-            <p>As nossas coleções exclusivas de marcas de luxo.</p>
+        <!-- Texto Principal -->
+        <section class="intro">
+            <h1><strong>Luxo. Exclusividade. Estilo.</strong></h1>
+            <p>Descobre as melhores peças de luxo no Tugabuy.</p>
         </section>
+    </main>
 
-        <section>
-            <h2>Drops</h2>
-            <p>Novidades e lançamentos limitados.</p>
-        </section>
-
-        <section>
-            <h2>Serviços</h2>
-            <p>Personal shopping, sourcing e muito mais.</p>
-        </section>
-
-        <section>
-            <h2>Contactos</h2>
-            <p>Fala connosco para saber mais.</p>
-        </section>
-    </div>
-
-    <!-- RODAPÉ -->
+    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2025 PortugalBuy. Todos os direitos reservados.</p>
+        <p>© 2025 Tugabuy. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
