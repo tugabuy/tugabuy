@@ -1,4 +1,8 @@
 function toggleMenu() {
-    var sidebar = document.querySelector(".sidebar");
-    sidebar.classList.toggle("open");
+    var sidebar = document.getElementById("sidebar");
+    if (sidebar.style.left === "0px") {
+        sidebar.style.left = "-250px";
+    } else {
+        sidebar.style.left = "0px";
+    }
 }
