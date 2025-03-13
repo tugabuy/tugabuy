@@ -3,79 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tugabuy</title>
+    <title>TUGABUY</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Menu Lateral -->
-    <nav class="sidebar">
+    <header>
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        <div class="logo-menu">
-            <img src="images/logo.png" alt="Tugabuy">
+        <div class="logo">
+            <img src="images/logo.png" alt="TUGABUY">
         </div>
+        <p class="slogan">UA - Unauthorized Authentic</p>
+    </header>
+
+    <nav id="sidebar">
         <ul>
             <li><a href="#">Início</a></li>
-            <li><a href="#">Homem</a></li>
-            <li><a href="#">Mulher</a></li>
+            <li><a href="#">Loja</a></li>
             <li><a href="#">Novidades</a></li>
-            <li><a href="#">Drops</a></li>
-            <li><a href="#">Pedido Especial</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="#">Contactos</a></li>
         </ul>
     </nav>
 
-    <!-- Banner Inicial -->
-    <header class="banner">
-        <img src="images/logo.png" alt="Tugabuy">
-        <p>Encontra os melhores produtos aos melhores preços.</p>
-    </header>
+    <main>
+        <section class="categorias">
+            <div class="categoria"><a href="#">Homem</a></div>
+            <div class="categoria"><a href="#">Mulher</a></div>
+        </section>
 
-    <!-- Categorias -->
-    <section class="categorias">
-        <div class="categoria">
-            <img src="images/logo.png" alt="Homem">
-            <p>Homem</p>
-        </div>
-        <div class="categoria">
-            <img src="images/logo.png" alt="Mulher">
-            <p>Mulher</p>
-        </div>
-    </section>
+        <section class="sub-categorias">
+            <div class="sub"><a href="#">Parte de Cima</a></div>
+            <div class="sub"><a href="#">Parte de Baixo</a></div>
+            <div class="sub"><a href="#">Acessórios</a></div>
+            <div class="sub"><a href="#">Calçado</a></div>
+            <div class="sub"><a href="#">Loja Toda</a></div>
+            <div class="sub"><a href="#">Novas Adições</a></div>
+            <div class="sub"><a href="#">Drops</a></div>
+        </section>
 
-    <!-- Produtos -->
-    <section class="produtos">
-        <div class="produto"><img src="images/logo.png" alt="Parte de Cima"><p>Parte de Cima</p></div>
-        <div class="produto"><img src="images/logo.png" alt="Parte de Baixo"><p>Parte de Baixo</p></div>
-        <div class="produto"><img src="images/logo.png" alt="Acessórios"><p>Acessórios</p></div>
-        <div class="produto"><img src="images/logo.png" alt="Calçado"><p>Calçado</p></div>
-        <div class="produto"><img src="images/logo.png" alt="Loja"><p>Ver Loja</p></div>
-        <div class="produto"><img src="images/logo.png" alt="Novidades"><p>Novidades</p></div>
-        <div class="produto"><img src="images/logo.png" alt="Drops"><p>Drops</p></div>
-    </section>
+        <section class="info">
+            <div class="info-item"><a href="#">Métodos de Pagamento</a></div>
+            <div class="info-item"><a href="#">Envios e Prazos</a></div>
+            <div class="info-item"><a href="#">Pedidos Personalizados</a></div>
+        </section>
+    </main>
 
-    <!-- Informações -->
-    <section class="info">
-        <div class="info-bloco">
-            <h3>Envios</h3>
-            <p>Entrega rápida e segura para todo o país.</p>
-        </div>
-        <div class="info-bloco">
-            <h3>Pagamento</h3>
-            <p>Várias opções de pagamento disponíveis.</p>
-        </div>
-        <div class="info-bloco">
-            <h3>Pedidos Especiais</h3>
-            <p>Encomenda produtos que não temos na loja.</p>
-        </div>
-    </section>
-
-    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2025 Tugabuy - Todos os direitos reservados.</p>
+        <div class="footer-links">
+            <a href="#">Sobre Nós</a>
+            <a href="#">Termos & Condições</a>
+            <a href="#">Contactos</a>
+        </div>
+        <p>© TUGABUY 2025. Todos os direitos reservados.</p>
     </footer>
 
     <script src="scripts.js"></script>
-
 </body>
 </html>
