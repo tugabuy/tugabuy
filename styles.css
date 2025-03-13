@@ -12,48 +12,55 @@ body {
     left: -250px;
     height: 100%;
     background-color: #111;
-    padding-top: 20px;
     transition: left 0.3s;
+    z-index: 1000; /* Garante que o menu está acima do resto */
 }
 
 .sidebar.open {
     left: 0;
 }
 
-.sidebar .menu-icon {
+/* Ícone do menu */
+.menu-header {
+    background: #111;
+    padding: 10px;
+    text-align: left;
+}
+
+.menu-icon {
     color: white;
     font-size: 24px;
     cursor: pointer;
-    padding-left: 15px;
 }
 
-.sidebar .menu {
+/* Estilo dos links do menu */
+.menu {
     list-style-type: none;
     padding: 0;
 }
 
-.sidebar .menu li {
+.menu li {
     padding: 10px;
 }
 
-.sidebar .menu li a {
+.menu li a {
     color: white;
     text-decoration: none;
 }
 
-/* Banner */
-.banner {
+/* Conteúdo Principal */
+.content {
+    margin-left: 250px;
+    padding: 20px;
     text-align: center;
-    margin-top: 50px;
 }
 
 .banner img {
-    width: 150px;
+    width: 200px;
 }
 
 .banner p {
     font-size: 18px;
-    margin-top: 10px;
 }
 
 /* Secções */
@@ -66,10 +73,6 @@ body {
 .section {
     text-align: center;
     width: 30%;
-}
-
-.section h3 {
-    margin: 15px 0;
 }
 
 .section a {
