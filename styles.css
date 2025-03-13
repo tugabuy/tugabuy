@@ -1,73 +1,84 @@
-/* Reset básico para evitar margens extras */
+/* Reset Básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden; /* Remove a barra de rolagem horizontal */
 }
 
+/* Corpo da Página */
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
-    color: black;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* MENU LATERAL */
+/* Sidebar (Menu Lateral) */
 .sidebar {
     position: fixed;
     top: 0;
     left: 0;
     width: 250px;
     height: 100vh;
-    background-color: white;
-    padding-top: 20px;
-    border-right: 1px solid black;
+    background: #f8f8f8;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar .menu-header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 
-.sidebar .logo-sidebar {
-    width: 120px; /* Ajusta o tamanho do logo no menu */
-    margin-bottom: 20px;
+.menu-logo {
+    width: 120px;
 }
 
-.sidebar nav ul {
+#menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos do Menu */
+.sidebar ul {
     list-style: none;
-    padding: 0;
+    padding: 20px 0;
 }
 
-.sidebar nav ul li {
-    margin: 10px 0;
+.sidebar ul li {
+    margin-bottom: 15px;
 }
 
-.sidebar nav ul li a {
+.sidebar ul li a {
     text-decoration: none;
-    color: black;
+    color: #333;
+    font-size: 18px;
     font-weight: bold;
 }
 
-/* CONTEÚDO PRINCIPAL */
-.content {
-    margin-left: 250px; /* Compensa a largura do menu */
-    padding: 20px;
+/* Main Content */
+main {
+    margin-left: 250px; /* Para não sobrepor o menu */
+    padding: 50px;
     text-align: center;
 }
 
-/* LOGO CENTRAL */
+/* Logo Central */
 .logo-central {
-    width: 200px; /* Ajusta o tamanho do logo no centro */
     margin-bottom: 20px;
 }
 
-/* RODAPÉ */
+.logo-central img {
+    width: 180px;
+}
+
+/* Rodapé */
 footer {
     text-align: center;
-    padding: 10px;
-    border-top: 1px solid black;
-    width: 100%;
     margin-top: auto;
+    padding: 20px;
+    background: #f8f8f8;
 }
