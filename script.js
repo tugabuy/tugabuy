@@ -1,3 +1,3 @@
 function toggleMenu() {
-    document.querySelector('.menu').classList.toggle('open');
+    document.querySelector('.sidebar').classList.toggle('open');
 }
