@@ -9,7 +9,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    text-align: center;
 }
 
 header {
@@ -25,10 +24,6 @@ nav ul {
     gap: 20px;
 }
 
-nav ul li {
-    display: inline;
-}
-
 nav ul li a {
     text-decoration: none;
     color: black;
@@ -36,6 +31,7 @@ nav ul li a {
 
 .main-content {
     flex: 1;
+    text-align: center;
     padding: 50px;
 }
 
