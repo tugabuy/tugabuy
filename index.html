@@ -5,83 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TugaBuy</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
 
-    <!-- Ícone do Menu (sempre visível) -->
-    <div class="menu-header">
-        <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
-    </div>
+    <!-- Botão menu hamburguer -->
+    <button class="menu-toggle" id="menuToggle">☰</button>
 
-    <!-- Menu Lateral -->
-    <div class="sidebar" id="sidebar">
+    <!-- Menu lateral escondido -->
+    <nav class="sidebar" id="sidebar">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="TugaBuy Logo" class="sidebar-logo">
+        </div>
         <ul class="menu">
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Produtos</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Coleções</a></li>
+            <li><a href="#">Drops</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contactos</a></li>
         </ul>
-    </div>
+    </nav>
 
-    <!-- Conteúdo Principal -->
-    <div class="content">
-        <div class="banner">
-            <img src="images/logo.png" alt="TugaBuy">
-            <p>O seu agente de compras de confiança.</p>
+    <!-- Conteúdo principal -->
+    <main>
+        <div class="center-logo">
+            <img src="images/logo.png" alt="TugaBuy Logo">
         </div>
-        
-        <div class="sections">
-            <div class="section">
-                <h3>Serviços</h3>
-                <a href="#">Contacte-nos</a>
-            </div>
-            <div class="section">
-                <h3>Arte de Presentear</h3>
-                <a href="#">Gifts para Mulher | Gifts para Homem</a>
-            </div>
-            <div class="section">
-                <h3>Pedido de Peças</h3>
-                <a href="#">Fazer Pedido</a>
-            </div>
-        </div>
-    </div>
+        <h1>Luxo. Exclusividade. Estilo.</h1>
+        <p>Descobre as melhores peças na TugaBuy.</p>
+    </main>
 
     <!-- Rodapé -->
     <footer>
-        <div class="footer-links">
-            <div class="column">
-                <h4>Empresa</h4>
-                <ul>
-                    <li><a href="#">Sobre Nós</a></li>
-                    <li><a href="#">Termos e Condições</a></li>
-                    <li><a href="#">Política de Privacidade</a></li>
-                </ul>
-            </div>
-            <div class="column">
-                <h4>Apoio ao Cliente</h4>
-                <ul>
-                    <li><a href="#">Perguntas Frequentes</a></li>
-                    <li><a href="#">Envios e Devoluções</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="column newsletter">
-                <h4>Subscreve a nossa Newsletter</h4>
-                <input type="email" placeholder="O teu email">
-                <button>Subscrever</button>
-            </div>
-            <div class="column social-media">
-                <h4>Segue-nos</h4>
-                <a href="#">Instagram</a>
-                <a href="#">TikTok</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 TugaBuy. Todos os direitos reservados.</p>
-        </div>
+        <p>© 2025 TugaBuy. Todos os direitos reservados.</p>
     </footer>
-
-    <script src="scripts.js"></script>
 
 </body>
 </html>
