@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const menuToggle = document.getElementById("menu-toggle");
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menuToggle");
     const sidebar = document.querySelector(".sidebar");
 
-    menuToggle.addEventListener("click", function() {
-        sidebar.classList.toggle("open");
+    menuToggle.addEventListener("click", function () {
+        sidebar.classList.toggle("active");
     });
 });
