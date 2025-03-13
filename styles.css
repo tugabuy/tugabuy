@@ -1,130 +1,85 @@
-/* Reset básico */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: white;
-    color: black;
+    text-align: center;
 }
 
-/* Menu Lateral */
-#sidebar {
+header {
+    padding: 20px;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.slogan {
+    font-size: 14px;
+    color: gray;
+}
+
+.menu-toggle {
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+nav {
+    display: none;
     position: fixed;
-    left: -250px;
-    top: 0;
-    width: 250px;
+    width: 200px;
     height: 100%;
-    background: white;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    padding-top: 60px;
-    transition: left 0.3s ease;
+    background: #000;
+    color: white;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
 }
 
-#sidebar ul {
+nav ul {
     list-style: none;
     padding: 0;
 }
 
-#sidebar ul li {
-    padding: 10px;
-    text-align: center;
+nav ul li {
+    padding: 15px;
 }
 
-#sidebar ul li a {
+nav ul li a {
+    color: white;
     text-decoration: none;
-    color: black;
-    display: block;
 }
 
-.menu-logo {
-    display: block;
-    width: 80%;
-    margin: 0 auto 20px;
-}
-
-#menu-toggle {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-#menu-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-/* Banner */
-header {
-    text-align: center;
-    padding: 20px;
-}
-
-.banner-logo {
-    width: 120px;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Categorias */
-.categories {
+.categorias {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.category {
-    background: black;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    width: 150px;
-}
-
-/* Produtos */
-.featured-products {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    padding: 20px;
+    margin-top: 20px;
 }
 
-.product {
-    background: black;
-    color: white;
-    padding: 20px;
-    text-align: center;
+.categoria, .sub, .info-item {
+    background: #f4f4f4;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 5px;
+    display: inline-block;
 }
 
-/* Secções Informativas */
-.info-sections {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
+.categoria a, .sub a, .info-item a {
+    text-decoration: none;
+    color: black;
 }
 
-.info-box {
-    background: black;
-    color: white;
-    padding: 20px;
-    width: 30%;
-    text-align: center;
-}
-
-/* Rodapé */
 footer {
-    display: flex;
-    justify-content: space-around;
-    background: black;
-    color: white;
+    background: #f8f8f8;
     padding: 20px;
+    margin-top: 20px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
 }
