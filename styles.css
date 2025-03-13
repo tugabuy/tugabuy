@@ -63,9 +63,15 @@
 }
 
 /* Conteúdo principal */
+/* Centralizar conteúdo na página */
 main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 50px); /* Altura total menos o rodapé */
     text-align: center;
-    padding-top: 50px;
+    padding: 20px;
 }
 
 /* Logo central */
