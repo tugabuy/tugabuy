@@ -1,4 +1,8 @@
-document.getElementById('menuToggle').addEventListener('click', function() {
-    var sidebar = document.getElementById('sidebar');
-    sidebar.classList.toggle('active');
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menuToggle");
+    const sidebar = document.getElementById("sidebar");
+
+    menuToggle.addEventListener("click", function () {
+        sidebar.classList.toggle("active");
+    });
 });
