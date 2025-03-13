@@ -1,107 +1,51 @@
-/* Reset básico */
-* {
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
-/* Botão menu hamburguer */
-.menu-toggle {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1001;
-}
-
-/* Menu lateral (escondido por padrão) */
-.sidebar {
+header {
     position: fixed;
     top: 0;
-    left: -250px; /* Escondido */
-    width: 250px;
-    height: 100vh;
-    background-color: #f8f8f8;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: left 0.3s ease;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    padding: 10px 0;
     z-index: 1000;
 }
 
-/* Logo do menu lateral */
-.sidebar-logo {
-    width: 120px;
-    margin-bottom: 20px;
+#logo {
+    height: 50px;
 }
 
-/* Lista do menu */
-.menu {
-    list-style: none;
-    text-align: center;
-    width: 100%;
-}
-
-.menu li {
-    margin: 15px 0;
-}
- 
-.menu a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-
-/* Quando o menu estiver ativo */
-.sidebar.active {
-    left: 0;
-}
-
-/* Logo fixo ao topo */
-.top-logo {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    z-index: 999;
-}
-
-/* Conteúdo principal */
 main {
+    margin-top: 80px;
     text-align: center;
-    padding-top: 100px; /* Espaço para não sobrepor o logo */
+    padding: 20px;
 }
 
-/* Rodapé */
 footer {
-    position: relative;
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
     background-color: #f8f8f8;
     text-align: center;
     padding: 20px 0;
-    margin-top: 50px;
 }
 
-/* Layout do rodapé */
-.footer-info {
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
     display: flex;
     justify-content: center;
     gap: 50px;
-    margin-top: 10px;
-}
-
-.footer-section {
-    text-align: left;
 }
 
 .footer-section h4 {
-    font-size: 16px;
     margin-bottom: 10px;
 }
 
@@ -110,25 +54,11 @@ footer {
     padding: 0;
 }
 
-.footer-section li {
-    margin-bottom: 5px;
-}
-
-.footer-section a {
+.footer-section ul li a {
     text-decoration: none;
     color: black;
-    font-size: 14px;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .top-logo img {
-        width: 120px;
-    }
-
-    .footer-info {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
+.footer-section ul li a:hover {
+    text-decoration: underline;
 }
