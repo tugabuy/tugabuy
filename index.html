@@ -5,67 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TugaBuy</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
+    <header id="fixed-header">
+        <img src="images/logo.png" alt="TugaBuy Logo" id="logo">
+    </header>
 
-    <!-- Botão menu hamburguer -->
-    <button class="menu-toggle" id="menuToggle">☰</button>
-
-    <!-- Menu lateral escondido -->
-    <nav class="sidebar" id="sidebar">
-        <div class="logo-container">
-            <img src="images/logo.png" alt="TugaBuy Logo" class="sidebar-logo">
-        </div>
-        <ul class="menu">
-            <li><a href="#">Coleções</a></li>
-            <li><a href="#">Drops</a></li>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="#">Contactos</a></li>
-        </ul>
-    </nav>
-
-    <!-- Logo fixo ao topo -->
-    <div class="top-logo">
-        <img src="images/logo.png" alt="TugaBuy Logo">
-    </div>
-
-    <!-- Conteúdo principal -->
     <main>
         <h1>Luxo. Exclusividade. Estilo.</h1>
         <p>Descobre as melhores peças de luxo no TugaBuy.</p>
     </main>
 
-    <!-- Rodapé -->
     <footer>
-        <p>© 2025 TugaBuy. Todos os direitos reservados.</p>
-        <div class="footer-info">
-            <div class="footer-section">
-                <h4>Ajuda</h4>
-                <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Envios e Devoluções</a></li>
-                    <li><a href="#">Métodos de Pagamento</a></li>
-                </ul>
+        <div class="footer-content">
+            <p>&copy; 2025 TugaBuy. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Ajuda</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Envios e Devoluções</a></li>
+                        <li><a href="#">Métodos de Pagamento</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Termos e Condições</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Segue-nos</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">TikTok</a></li>
+                        <li><a href="#">Discord</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-section">
-                <h4>Empresa</h4>
-                <ul>
-                    <li><a href="#">Sobre Nós</a></li>
-                    <li><a href="#">Termos e Condições</a></li>
-                    <li><a href="#">Política de Privacidade</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Segue-nos</h4>
-                <ul>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">TikTok</a></li>
-                    <li><a href="#">Discord</a></li>
-                </ul>
+            <div class="newsletter">
+                <h4>Subscreve a nossa Newsletter</h4>
+                <form>
+                    <input type="email" placeholder="O teu email" required>
+                    <button type="submit">Subscrever</button>
+                </form>
             </div>
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
