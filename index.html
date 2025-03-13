@@ -5,69 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TugaBuy</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
 
-<header>
-    <img src="images/logo.png" alt="TugaBuy Logo">
-    <nav>
-        <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Loja</a></li>
-            <li><a href="#">Sobre Nós</a></li>
-            <li><a href="#">Contacto</a></li>
+    <!-- Botão menu hamburguer -->
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <!-- Menu lateral escondido -->
+    <nav class="sidebar" id="sidebar">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="TugaBuy Logo" class="sidebar-logo">
+        </div>
+        <ul class="menu">
+            <li><a href="#">Coleções</a></li>
+            <li><a href="#">Drops</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contactos</a></li>
         </ul>
     </nav>
-</header>
 
-<main class="main-content">
-    <h1>Luxo. Exclusividade. Estilo.</h1>
-    <p>Descobre as melhores peças de luxo no TugaBuy.</p>
-</main>
+    <!-- Conteúdo principal -->
+    <main>
+        <div class="center-logo">
+            <img src="images/logo.png" alt="TugaBuy Logo">
+        </div>
+        <h1>Luxo. Exclusividade. Estilo.</h1>
+        <p>Descobre as melhores peças de luxo no TugaBuy.</p>
+    </main>
 
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-section">
-            <h3>Serviços</h3>
-            <p>Apoio ao Cliente</p>
-            <p>Envios e Entregas</p>
-            <p>Devoluções</p>
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Serviços</h3>
+                <p>Apoio ao Cliente</p>
+                <p>Envios e Entregas</p>
+                <p>Devoluções</p>
+            </div>
+            <div class="footer-section">
+                <h3>Encomendas</h3>
+                <p>Acompanhar Pedido</p>
+                <p>Métodos de Pagamento</p>
+            </div>
+            <div class="footer-section">
+                <h3>Sobre a TugaBuy</h3>
+                <p>A Nossa História</p>
+                <p>Blog</p>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <p>Termos e Condições</p>
+                <p>Política de Privacidade</p>
+            </div>
+            <div class="footer-section">
+                <h3>Serviço ao Cliente</h3>
+                <p>Contactar via WhatsApp</p>
+                <p>Seg-Sáb: 9h - 18h</p>
+                <p>Email</p>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Receba novidades e ofertas exclusivas.</p>
+                <input type="email" placeholder="Seu e-mail">
+                <button>Subscrever</button>
+            </div>
+            <div class="footer-section">
+                <h3>Siga-nos</h3>
+                <p>Facebook | Instagram | X | YouTube</p>
+            </div>
         </div>
-        <div class="footer-section">
-            <h3>Encomendas</h3>
-            <p>Acompanhar Pedido</p>
-            <p>Métodos de Pagamento</p>
-        </div>
-        <div class="footer-section">
-            <h3>Sobre a TugaBuy</h3>
-            <p>A Nossa História</p>
-            <p>Blog</p>
-        </div>
-        <div class="footer-section">
-            <h3>Legal</h3>
-            <p>Termos e Condições</p>
-            <p>Política de Privacidade</p>
-        </div>
-        <div class="footer-section">
-            <h3>Serviço ao Cliente</h3>
-            <p>Contactar via WhatsApp</p>
-            <p>Seg-Sáb: 9h - 18h</p>
-            <p>Email</p>
-        </div>
-        <div class="footer-section">
-            <h3>Newsletter</h3>
-            <p>Receba novidades e ofertas exclusivas.</p>
-            <input type="email" placeholder="Seu e-mail">
-            <button>Subscrever</button>
-        </div>
-        <div class="footer-section">
-            <h3>Siga-nos</h3>
-            <p>Facebook | Instagram | X | YouTube</p>
-        </div>
-    </div>
-    <p class="copyright">© TugaBuy 2025. Todos os direitos reservados.</p>
-</footer>
+        <p>&copy; 2025 TugaBuy. Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 </html>
