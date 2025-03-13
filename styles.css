@@ -25,6 +25,11 @@ body {
 .sidebar .menu {
     list-style-type: none;
     padding: 0;
+    display: none;
+}
+
+.sidebar .menu.open {
+    display: block;
 }
 
 .sidebar .menu li {
@@ -42,8 +47,20 @@ body {
     padding: 20px;
 }
 
-.banner img {
-    width: 100%;
+/* Logo e slogan */
+.banner {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.logo {
+    width: 200px;
+}
+
+.slogan {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
 }
 
 /* Secções */
