@@ -1,69 +1,106 @@
-/* 🔹 Definições Globais */
-* {
-    box-sizing: border-box;
+/* Reset básico */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-html, body {
-    height: 100%;
-    font-family: Arial, sans-serif;
     background-color: white;
     color: black;
-    display: flex;
-    flex-direction: column;
 }
 
-/* 🔹 Cabeçalho */
-header {
-    text-align: center;
-    padding: 20px;
-    border-bottom: 1px solid black;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 10px 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-
-/* 🔹 Seção Principal */
-main {
-    flex: 1;
+/* Estilização do menu lateral */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    border-right: 1px solid #ccc;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding-top: 20px;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* 🔹 Hero (Texto principal) */
+.logo-container {
+    text-align: center;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.menu li {
+    margin: 20px 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 18px;
+}
+
+/* Menu hambúrguer */
+.menu-toggle {
+    position: absolute;
+    top: 20px;
+    right: -50px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    display: none; /* Oculto no desktop */
+}
+
+/* Layout principal */
+main {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Hero Section */
 #hero {
     text-align: center;
-    margin: 50px 0;
+    padding: 100px 20px;
 }
 
-/* 🔹 Seções Horizontais */
-.sections-container {
-    width: 80%;
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    padding: 50px 0;
-}
-
-/* 🔹 Rodapé fixo no fundo */
+/* Rodapé */
 footer {
+    background: white;
+    color: black;
     text-align: center;
     padding: 20px;
-    border-top: 1px solid black;
-    margin-top: auto;
+    border-top: 1px solid #ccc;
+    position: relative;
     width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .sidebar.open {
+        transform: translateX(0);
+    }
+    
+    main {
+        margin-left: 0;
+    }
 }
