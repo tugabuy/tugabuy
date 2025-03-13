@@ -13,13 +13,15 @@ body {
     height: 100%;
     background-color: #111;
     padding-top: 20px;
+    transition: transform 0.3s ease;
 }
 
 .sidebar .menu-icon {
     color: white;
     font-size: 24px;
     cursor: pointer;
-    padding-left: 15px;
+    padding: 15px;
+    display: block;
 }
 
 .sidebar .menu {
@@ -45,112 +47,25 @@ body {
 .content {
     margin-left: 250px;
     padding: 20px;
-}
-
-/* Logo e slogan */
-.banner {
     text-align: center;
-    margin: 40px 0;
 }
 
-.logo {
-    width: 200px;
+.banner img {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
 }
 
 .slogan {
     font-size: 18px;
-    color: #333;
-    margin-top: 10px;
-}
-
-/* Secções */
-.sections {
-    display: flex;
-    justify-content: space-around;
-    padding: 40px 0;
-}
-
-.section {
-    text-align: center;
-    width: 30%;
-}
-
-.section img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.section h3 {
-    margin: 15px 0;
-}
-
-.section a {
-    text-decoration: none;
-    color: black;
     font-weight: bold;
+    margin-top: 10px;
 }
 
 /* Rodapé */
 footer {
     background-color: #f8f8f8;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-.footer-links {
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer-links .column {
-    width: 23%;
-}
-
-.footer-links h4 {
-    margin-bottom: 10px;
-}
-
-.footer-links ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.footer-links ul li {
-    margin-bottom: 5px;
-}
-
-.footer-links ul li a {
-    text-decoration: none;
-    color: black;
-}
-
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-}
-
-.newsletter input {
-    padding: 5px;
-    width: 200px;
-    margin-top: 5px;
-}
-
-.newsletter button {
-    padding: 5px 10px;
-    background-color: black;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.social-media a {
-    text-decoration: none;
-    color: black;
-    margin-right: 10px;
-}
-
-.copyright {
+    padding: 10px;
     text-align: center;
-    padding-top: 20px;
+    margin-top: 40px;
 }
