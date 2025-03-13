@@ -76,9 +76,8 @@ main {
 
 /* Rodapé */
 footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
-    left: 0;
     width: 100%;
     background-color: #f8f8f8;
     text-align: center;
