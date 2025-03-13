@@ -4,31 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TugaBuy</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <div class="menu-container">
-            <div class="menu-toggle" onclick="toggleMenu()">
-                &#9776;
-            </div>
-            <nav class="menu">
-                <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Loja</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
+
+    <!-- Botão menu hamburguer -->
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <!-- Menu lateral escondido -->
+    <nav class="sidebar" id="sidebar">
         <div class="logo-container">
+            <img src="images/logo.png" alt="TugaBuy Logo" class="sidebar-logo">
+        </div>
+        <ul class="menu">
+            <li><a href="#">Coleções</a></li>
+            <li><a href="#">Drops</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contactos</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <div class="center-logo">
             <img src="images/logo.png" alt="TugaBuy Logo">
         </div>
-    </header>
-    <main>
         <h1>Luxo. Exclusividade. Estilo.</h1>
         <p>Descobre as melhores peças de luxo no TugaBuy.</p>
     </main>
+
+    <!-- Rodapé -->
     <footer>
         <div class="footer-container">
             <div class="footer-section">
@@ -69,13 +75,8 @@
                 <p>Facebook | Instagram | X | YouTube</p>
             </div>
         </div>
-        <p>&copy; TugaBuy 2025. Todos os direitos reservados.</p>
+        <p>&copy; 2025 TugaBuy. Todos os direitos reservados.</p>
     </footer>
-    <script>
-        function toggleMenu() {
-            const menu = document.querySelector('.menu');
-            menu.classList.toggle('active');
-        }
-    </script>
+
 </body>
 </html>
