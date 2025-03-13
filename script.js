@@ -1,3 +1,4 @@
 function toggleMenu() {
-    alert("Menu clicado (Implementação futura)");
+    var sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('open');
 }
