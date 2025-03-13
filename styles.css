@@ -3,6 +3,9 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -19,24 +22,12 @@ header {
     align-items: center;
 }
 
-.menu {
-    display: none;
-}
-
-.menu.active {
-    display: block;
-}
-
-.menu-toggle {
-    font-size: 24px;
-    cursor: pointer;
-}
-
 .logo-container img {
     height: 50px;
 }
 
 main {
+    flex: 1;
     padding: 20px;
 }
 
@@ -44,6 +35,10 @@ footer {
     background: #222;
     color: white;
     padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
 
 .footer-container {
