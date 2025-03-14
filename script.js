@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menuToggle");
     const sidebar = document.getElementById("sidebar");
+    const logo = document.querySelector(".center-logo");
 
     // Alternar menu ao clicar no botão
     menuToggle.addEventListener("click", function () {
@@ -16,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Alteração da opacidade do logo ao rolar a página
     window.addEventListener("scroll", function () {
-        var logo = document.querySelector(".header-logo");
         if (window.scrollY > 50) {
             logo.classList.add("scrolled");
         } else {
