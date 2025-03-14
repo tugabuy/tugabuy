@@ -64,11 +64,22 @@
 
 /* Conteúdo principal */
 main {
-    min-height: 100vh; /* Ocupa toda a altura da tela */
+    min-height: calc(100vh - 100px); /* Ajuste conforme necessário */
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: center;    
+}
+
+/* Garante que o rodapé fica no final da página */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    margin-top: auto;
 }
 
 /* Correção aplicada ao h1 */
