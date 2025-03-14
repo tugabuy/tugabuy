@@ -5,4 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
     menuToggle.addEventListener("click", function () {
         sidebar.classList.toggle("active");
     });
+
+    // Fechar o menu ao clicar fora dele
+    document.addEventListener("click", function (event) {
+        if (!sidebar.contains(event.target) && event.target !== menuToggle) {
+            sidebar.classList.remove("active");
+        }
+    });
 });
