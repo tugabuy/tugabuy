@@ -14,38 +14,44 @@ body {
     margin: 0;
     align-items: center;
     text-align: center;
+}
+
+/* Remover espaços extras no início */
+html, body {
     overflow-x: hidden;
 }
 
-/* Contém o logótipo e o slogan */
-.header {
+/* Logo fixo no topo */
+.center-logo {
     position: fixed;
-    top: 0;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    text-align: center;
+    width: auto;
+    height: auto;
+    max-height: 200px;
     z-index: 1500;
-    background-color: white;
-    padding: 10px 20px;
     transition: opacity 0.3s ease-in-out;
 }
 
-/* Ocultar logo e slogan ao fazer scroll */
-.header.scrolled {
+/* Slogan */
+.slogan {
+    position: fixed;
+    top: 230px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1400;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Esconder ao fazer scroll */
+.hidden {
     opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-/* Estilização do logótipo */
-.center-logo {
-    width: auto;
-    height: auto;
-    max-height: 200px; /* Ajustar conforme necessário */
-    display: block;
-    margin: 0 auto;
-}
-
-/* Ajustar conteúdo para não ficar atrás do cabeçalho */
-.conteudo {
+/* Ajustar conteúdo para não ficar atrás do logo */
+main {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -53,7 +59,7 @@ body {
     align-items: center;
     text-align: center;
     width: 100%;
-    padding-top: 220px; /* Ajuste para garantir que o conteúdo não fique sobreposto pelo cabeçalho */
+    padding-top: 300px;
 }
 
 /* Estilização do menu hambúrguer */
@@ -65,75 +71,52 @@ body {
     border: none;
     font-size: 24px;
     cursor: pointer;
+    z-index: 1200;
 }
 
-/* Estilização da sidebar */
+/* Estilização do menu lateral */
 .sidebar {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -250px;
     width: 250px;
     height: 100vh;
     background: white;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
     z-index: 1100;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 60px;
-    transition: left 0.3s ease-in-out;
 }
 
-.sidebar-logo {
+/* Quando ativo, o menu aparece */
+.sidebar.active {
+    left: 0;
+}
+
+/* Logo do menu */
+.sidebar .sidebar-logo {
     width: 150px;
     margin-bottom: 20px;
 }
 
-/* Lista do menu */
-.menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    text-align: left;
-}
-
-.menu li {
-    padding: 10px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
-    display: block;
-}
-
-/* Botão do menu hambúrguer */
-.menu-toggle {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
 /* Rodapé */
 footer {
+    margin-top: auto;
     background: #f8f8f8;
-    text-align: center;
-    padding: 20px 0;
+    padding: 15px 20px;
     font-size: 14px;
+    color: #333;
     width: 100%;
 }
 
-.footer-content {
+/* Garantir que o texto não fique centrado */
+.footer-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
     padding: 20px;
 }
 
@@ -141,54 +124,10 @@ footer {
     flex: 1;
     min-width: 200px;
     margin: 10px;
+    text-align: left;
 }
 
 .footer-section h3 {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.footer-section p {
-    margin: 5px 0;
-}
-
-.footer-section input {
-    width: 80%;
-    padding: 5px;
-    margin-top: 5px;
-}
-
-.footer-section button {
-    margin-top: 5px;
-    padding: 5px 10px;
-    background-color: black;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 3px;
-}
-
-.footer-section button:hover {
-    background-color: grey;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .menu-toggle {
-        top: 10px;
-        left: 10px;
-    }
-
-    .sidebar {
-        width: 220px;
-    }
-
-    .header {
-        padding-top: 30px;
-    }
-
-    .conteudo {
-        padding-top: 180px;
-    }
 }
