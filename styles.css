@@ -16,64 +16,61 @@ body {
     text-align: center;
 }
 
-/* Remover espaços extras no início */
+/* Evita rolagem lateral desnecessária */
 html, body {
     overflow-x: hidden;
 }
 
-/* Logo fixo no topo sem espaço */
+/* Estilização do logótipo central */
 .center-logo {
     position: fixed;
-    top: 0;
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    width: auto;
-    height: auto;
-    max-height: 200px; /* Ajustar conforme necessário */
+    max-width: 200px;
     z-index: 1500;
 }
 
 /* Efeito de opacidade ao fazer scroll */
 .center-logo.scrolled {
-    opacity: 0.5; /* Reduz a opacidade quando se faz scroll */
+    opacity: 0.5;
     transition: opacity 0.3s ease-in-out;
 }
 
-/* Ajustar conteúdo para não ficar atrás do logo */
+/* Ajustar conteúdo para não sobrepor o logótipo */
 main {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     width: 100%;
-    padding-top: 220px; /* Garante que o conteúdo não fique sobreposto pelo logo */
+    padding-top: 250px; /* Ajustado para evitar sobreposição */
 }
 
 /* Estilização do menu hambúrguer */
 .menu-toggle {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
     background: none;
     border: none;
     font-size: 24px;
     cursor: pointer;
-    z-index: 1200;
+    z-index: 2000;
 }
 
 /* Estilização do menu lateral */
 .sidebar {
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -250px; /* Mantém escondido por padrão */
     width: 250px;
     height: 100vh;
     background: white;
     box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
     transition: left 0.3s ease-in-out;
-    z-index: 1100;
+    z-index: 1900;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,7 +82,7 @@ main {
     left: 0;
 }
 
-/* Logo do menu */
+/* Logo dentro do menu lateral */
 .sidebar .sidebar-logo {
     width: 150px;
     margin-bottom: 20px;
@@ -100,7 +97,7 @@ main {
 }
 
 .menu li {
-    margin: 15px 0;
+    margin: 10px 0;
 }
 
 .menu a {
@@ -117,26 +114,27 @@ main {
     color: grey;
 }
 
-/* Estilização do título e descrição */
+/* Títulos e parágrafos */
 h1 {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
-    margin-top: 10px; /* Pequeno espaço entre o título e a imagem */
+    margin-top: 10px;
 }
 
 p {
-    font-size: 16px;
+    font-size: 18px;
+    max-width: 600px;
 }
 
 /* Rodapé */
 footer {
-    margin-top: auto;
     background: #f8f8f8;
     text-align: center;
-    padding: 15px 0;
+    padding: 20px 0;
     font-size: 14px;
     color: #333;
     width: 100%;
+    margin-top: auto;
 }
 
 .footer-container {
@@ -181,16 +179,16 @@ footer {
 /* Responsividade */
 @media (max-width: 768px) {
     .center-logo {
-        max-height: 150px;
+        max-width: 150px;
     }
 
     main {
-        padding-top: 170px;
+        padding-top: 200px;
     }
 
     .menu-toggle {
-        top: 10px;
-        left: 10px;
+        top: 15px;
+        left: 15px;
     }
 
     .sidebar {
