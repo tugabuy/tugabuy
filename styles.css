@@ -12,6 +12,8 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
+    align-items: center;
+    text-align: center;
 }
 
 /* Cabeçalho */
@@ -93,20 +95,14 @@ header {
     color: #0073e6;
 }
 
-/* Estilização do logo fixo no topo */
+/* Estilização do logótipo fixo no topo */
 .header-logo {
-    position: fixed;
-    top: 10px;
+    position: absolute;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1200;
     width: 150px; /* Ajustável */
-    transition: opacity 0.3s ease;
-}
-
-/* Esconder logo ao fazer scroll */
-body.scrolled .header-logo {
-    opacity: 0;
 }
 
 /* Conteúdo principal */
@@ -117,7 +113,19 @@ main {
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    padding-top: 100px; /* Garante que o conteúdo não fica oculto pelo header */
+    padding-top: 60px; /* Reduzido para diminuir espaço */
+}
+
+/* Estilização do título e descrição */
+h1 {
+    margin-top: 10px; /* Ajuste para aproximar do logótipo */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+    margin-top: 5px; /* Reduzido para aproximar mais */
 }
 
 /* Rodapé */
@@ -128,6 +136,7 @@ footer {
     padding: 15px 0;
     font-size: 14px;
     color: #333;
+    width: 100%;
 }
 
 .footer-container {
