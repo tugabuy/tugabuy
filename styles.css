@@ -50,7 +50,7 @@
 .menu li {
     margin: 15px 0;
 }
- 
+
 .menu a {
     text-decoration: none;
     color: black;
@@ -65,10 +65,11 @@
 /* Conteúdo principal */
 main {
     text-align: center;
- h1 {
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7)
+}
 
-}    
+/* Correção aplicada ao h1 */
+main h1 {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 /* Logo central */
