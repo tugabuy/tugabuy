@@ -21,45 +21,30 @@ html, body {
     overflow-x: hidden;
 }
 
-/* Logo fixo no topo sem espaço */
-.header {
+/* Logo fixo no topo */
+.center-logo {
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: auto;
     height: auto;
-    max-height: 250px; /* Ajustar conforme necessário */
+    max-height: 200px;
     z-index: 1500;
     transition: opacity 0.3s ease-in-out;
 }
 
-/* Container do logo e slogan */
-.logo-container {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    z-index: 1500;
+/* Esconder logo e slogan ao dar scroll */
+.center-logo.scrolled,
+.slogan.scrolled {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Slogan */
+.slogan {
+    margin-top: 220px;
     transition: opacity 0.3s ease-in-out;
-}
-
-/* Efeito de desaparecimento ao fazer scroll */
-.logo-container.scrolled {
-    opacity: 0; /* O logótipo e o slogan desaparecem */
-}
-
-/* Ajustar conteúdo para não ficar atrás do logo */
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    padding-top: 220px; /* Garante que o conteúdo não fique sobreposto pelo logo */
 }
 
 /* Estilização do menu hambúrguer */
@@ -128,15 +113,10 @@ main {
     color: grey;
 }
 
-/* Estilização do título e descrição */
-h1 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-p {
-    font-size: 16px;
+/* Estilização do conteúdo principal */
+main {
+    flex: 1;
+    padding-top: 50px;
 }
 
 /* Rodapé */
@@ -191,12 +171,12 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .logo-container {
+    .center-logo {
         max-height: 150px;
     }
 
-    main {
-        padding-top: 170px;
+    .slogan {
+        margin-top: 170px;
     }
 
     .menu-toggle {
