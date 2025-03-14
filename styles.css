@@ -25,8 +25,19 @@ header {
     background: white;
     z-index: 1100;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
     text-align: center;
+}
+
+/* Estilização do logótipo fixo no topo */
+.header-logo {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1200;
+    width: auto;
+    height: auto; /* Mantém tamanho original da imagem */
+    max-height: 200px; /* Limite para evitar que ocupe muito espaço */
 }
 
 /* Estilização do menu hambúrguer */
@@ -95,26 +106,16 @@ header {
     color: #0073e6;
 }
 
-/* Estilização do logótipo fixo no topo */
-.header-logo {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1200;
-    width: auto;
-    height: 388px; /* Mantendo altura fixa */
-}
-
 /* Conteúdo principal */
 main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center; /* Alinha corretamente */
     align-items: center;
     text-align: center;
-    padding-top: 400px; /* Ajuste para espaço abaixo do logótipo */
+    width: 100%;
+    margin-top: 220px; /* Garante que o conteúdo não fica escondido pelo logo */
 }
 
 /* Estilização do título e descrição */
@@ -181,8 +182,12 @@ footer {
 @media (max-width: 768px) {
     .header-logo {
         width: auto;
-        height: 200px; /* Reduz tamanho do logo em ecrãs menores */
-        top: 5px;
+        height: auto;
+        max-height: 150px; /* Reduz tamanho do logo em ecrãs menores */
+    }
+
+    main {
+        margin-top: 170px; /* Ajuste para telas menores */
     }
 
     .menu-toggle {
@@ -192,9 +197,5 @@ footer {
 
     .sidebar {
         width: 200px;
-    }
-
-    main {
-        padding-top: 220px; /* Ajuste para o logo menor */
     }
 }
