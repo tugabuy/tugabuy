@@ -23,14 +23,13 @@ html, body {
 
 /* Logo fixo no topo sem espaço */
 .center-logo {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1100;
     width: auto;
     height: auto;
-    max-height: 200px; /* Ajuste a altura conforme necessário */
+    max-height: 200px; /* Ajustar conforme necessário */
 }
 
 /* Ajustar conteúdo para não ficar atrás do logo */
