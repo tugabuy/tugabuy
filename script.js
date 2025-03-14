@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menuToggle");
     const sidebar = document.getElementById("sidebar");
-    const header = document.getElementById("header");
+    const logo = document.querySelector(".center-logo");
+    const slogan = document.querySelector(".slogan");
 
     // Alternar menu ao clicar no botão
     menuToggle.addEventListener("click", function () {
@@ -15,12 +16,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Desaparecer logo e slogan ao fazer scroll
+    // Esconder logo e slogan ao rolar a página
     window.addEventListener("scroll", function () {
         if (window.scrollY > 50) {
-            header.classList.add("hidden");
+            logo.classList.add("hidden");
+            slogan.classList.add("hidden");
         } else {
-            header.classList.remove("hidden");
+            logo.classList.remove("hidden");
+            slogan.classList.remove("hidden");
         }
     });
 });
