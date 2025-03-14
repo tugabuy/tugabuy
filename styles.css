@@ -16,33 +16,24 @@ body {
     text-align: center;
 }
 
-/* Cabeçalho fixo */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: white;
-    z-index: 1100;
-    text-align: center;
-    padding: 0; /* Remove qualquer padding */
-    height: auto;
+/* Remover espaços extras no início */
+html, body {
+    overflow-x: hidden;
 }
 
-/* Estilização do logótipo fixo no topo */
-.header-logo {
-    display: block;
+/* Logo fixo no topo sem espaço */
+.center-logo {
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1200;
+    z-index: 1100;
     width: auto;
     height: auto;
-    max-height: 100px; /* Ajusta para evitar ocupar muito espaço */
+    max-height: 200px; /* Ajuste a altura conforme necessário */
 }
 
-/* Ajuste para garantir que o conteúdo não se sobrepõe ao logótipo */
+/* Ajustar conteúdo para não ficar atrás do logo */
 main {
     flex: 1;
     display: flex;
@@ -51,13 +42,80 @@ main {
     align-items: center;
     text-align: center;
     width: 100%;
-    margin-top: 120px; /* Ajustado para não colidir com o logótipo */
+    padding-top: 220px; /* Garante que o conteúdo não fique sobreposto pelo logo */
+}
+
+/* Estilização do menu hambúrguer */
+.menu-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1200;
+}
+
+/* Estilização do menu lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: white;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
+    z-index: 1100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+/* Quando ativo, o menu aparece */
+.sidebar.active {
+    left: 0;
+}
+
+/* Logo do menu */
+.sidebar .sidebar-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+/* Lista do menu */
+.menu {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.menu li {
+    margin: 15px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    transition: 0.3s ease;
+}
+
+.menu a:hover {
+    color: grey;
 }
 
 /* Estilização do título e descrição */
 h1 {
     font-size: 24px;
     font-weight: bold;
+    margin-top: 10px; /* Pequeno espaço entre o título e a imagem */
 }
 
 p {
@@ -116,11 +174,20 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .header-logo {
-        max-height: 80px; /* Reduz tamanho do logo em ecrãs menores */
+    .center-logo {
+        max-height: 150px;
     }
 
     main {
-        margin-top: 100px; /* Ajuste para telas menores */
+        padding-top: 170px;
+    }
+
+    .menu-toggle {
+        top: 10px;
+        left: 10px;
+    }
+
+    .sidebar {
+        width: 200px;
     }
 }
