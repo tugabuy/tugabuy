@@ -91,7 +91,7 @@ footer {
 
 /* Novo rodapé */
 .footer-container {
-    display: absolute;
+    display: fixed;
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: #f8f8f8;
