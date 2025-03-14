@@ -48,4 +48,152 @@ main {
     align-items: center;
     text-align: center;
     width: 100%;
-    padding-top: 220p
+    padding-top: 220px; /* Garante que o conteúdo não fique sobreposto pelo logo */
+}
+
+/* Estilização do menu hambúrguer */
+.menu-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1200;
+}
+
+/* Estilização do menu lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: white;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
+    z-index: 1100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+/* Quando ativo, o menu aparece */
+.sidebar.active {
+    left: 0;
+}
+
+/* Logo do menu */
+.sidebar .sidebar-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+/* Lista do menu */
+.menu {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.menu li {
+    margin: 15px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    transition: 0.3s ease;
+}
+
+.menu a:hover {
+    color: grey;
+}
+
+/* Estilização do título e descrição */
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px; /* Pequeno espaço entre o título e a imagem */
+}
+
+p {
+    font-size: 16px;
+}
+
+/* Rodapé */
+footer {
+    margin-top: auto;
+    background: #f8f8f8;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    color: #333;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-section input {
+    width: 80%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.footer-section button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.footer-section button:hover {
+    background-color: grey;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .center-logo {
+        max-height: 150px;
+    }
+
+    main {
+        padding-top: 170px;
+    }
+
+    .menu-toggle {
+        top: 10px;
+        left: 10px;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+}
