@@ -5,49 +5,61 @@
     box-sizing: border-box;
 }
 
-/* Estilização do body */
+/* Estilização geral */
 body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
     align-items: center;
     text-align: center;
+    min-height: 100vh;
 }
 
-/* Remover espaços extras no início */
+/* Evitar overflow lateral */
 html, body {
     overflow-x: hidden;
 }
 
-/* Logo fixo no topo */
-.center-logo {
+/* Logo e Slogan fixos no topo */
+.header {
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: auto;
-    height: auto;
-    max-height: 200px;
     z-index: 1500;
-    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+    padding-top: 10px;
 }
 
-/* Esconder logo e slogan ao dar scroll */
-.center-logo.scrolled,
-.slogan.scrolled {
-    opacity: 0;
-    pointer-events: none;
+/* Estilo do logo */
+.center-logo {
+    max-height: 200px;
+    transition: opacity 0.3s ease-in-out;
 }
 
 /* Slogan */
 .slogan {
-    margin-top: 220px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
     transition: opacity 0.3s ease-in-out;
 }
 
-/* Estilização do menu hambúrguer */
+/* Desaparecer ao dar scroll */
+.header.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Ajustar o conteúdo principal */
+main {
+    flex: 1;
+    padding-top: 250px;
+    width: 100%;
+}
+
+/* Menu hambúrguer */
 .menu-toggle {
     position: absolute;
     top: 10px;
@@ -76,15 +88,9 @@ html, body {
     padding-top: 60px;
 }
 
-/* Quando ativo, o menu aparece */
+/* Mostrar menu */
 .sidebar.active {
     left: 0;
-}
-
-/* Logo do menu */
-.sidebar .sidebar-logo {
-    width: 150px;
-    margin-bottom: 20px;
 }
 
 /* Lista do menu */
@@ -113,78 +119,12 @@ html, body {
     color: grey;
 }
 
-/* Estilização do conteúdo principal */
-main {
-    flex: 1;
-    padding-top: 50px;
-}
-
 /* Rodapé */
 footer {
-    margin-top: auto;
     background: #f8f8f8;
     text-align: center;
     padding: 15px 0;
     font-size: 14px;
     color: #333;
     width: 100%;
-}
-
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 10px;
-}
-
-.footer-section {
-    flex: 1;
-    min-width: 200px;
-    margin: 10px;
-}
-
-.footer-section h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.footer-section input {
-    width: 80%;
-    padding: 5px;
-    margin-top: 5px;
-}
-
-.footer-section button {
-    margin-top: 5px;
-    padding: 5px 10px;
-    border: none;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    border-radius: 3px;
-}
-
-.footer-section button:hover {
-    background-color: grey;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .center-logo {
-        max-height: 150px;
-    }
-
-    .slogan {
-        margin-top: 170px;
-    }
-
-    .menu-toggle {
-        top: 10px;
-        left: 10px;
-    }
-
-    .sidebar {
-        width: 200px;
-    }
 }
