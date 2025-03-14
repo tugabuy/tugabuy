@@ -3,48 +3,76 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
-/* Botão menu hambúrguer */
-.menu-toggle {
+/* Estilização do body */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Cabeçalho */
+header {
     position: fixed;
-    top: 15px;
-    left: 15px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 1100;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Estilização do menu hambúrguer */
+.menu-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
     background: none;
     border: none;
     font-size: 24px;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 1200;
 }
 
-/* Menu lateral (escondido por padrão) */
+/* Estilização do menu lateral */
 .sidebar {
     position: fixed;
     top: 0;
     left: -250px; /* Escondido */
     width: 250px;
     height: 100vh;
-    background-color: #f8f8f8;
-    padding: 20px;
+    background: white;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
+    z-index: 1100;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: left 0.3s ease;
-    z-index: 1000;
+    padding-top: 60px;
 }
 
-/* Logo do menu lateral */
-.sidebar-logo {
-    width: 120px;
+/* Quando ativo, o menu aparece */
+.sidebar.active {
+    left: 0;
+}
+
+/* Logo do menu */
+.sidebar .sidebar-logo {
+    width: 150px;
     margin-bottom: 20px;
 }
 
 /* Lista do menu */
 .menu {
     list-style: none;
-    text-align: center;
+    padding: 0;
     width: 100%;
+    text-align: center;
 }
 
 .menu li {
@@ -54,12 +82,15 @@
 .menu a {
     text-decoration: none;
     color: black;
+    font-size: 18px;
     font-weight: bold;
+    display: block;
+    padding: 10px;
+    transition: 0.3s ease;
 }
 
-/* Quando o menu estiver ativo */
-.sidebar.active {
-    left: 0;
+.menu a:hover {
+    color: #0073e6;
 }
 
 /* Estilização do logo fixo no topo */
@@ -68,9 +99,9 @@
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 150px;
+    z-index: 1200;
+    width: 150px; /* Ajustável */
     transition: opacity 0.3s ease;
-    z-index: 1000;
 }
 
 /* Esconder logo ao fazer scroll */
@@ -80,60 +111,42 @@ body.scrolled .header-logo {
 
 /* Conteúdo principal */
 main {
-    min-height: calc(100vh - 100px); /* Ajuste conforme necessário */
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Alinha o conteúdo mais para cima */
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
-    padding-top: 80px; /* Espaçamento do topo */
-}
-
-/* Garante que o rodapé fica no final da página */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-footer {
-    margin-top: auto;
+    padding-top: 100px; /* Garante que o conteúdo não fica oculto pelo header */
 }
 
 /* Rodapé */
 footer {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #f8f8f8;
+    margin-top: auto;
+    background: #f8f8f8;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
+    font-size: 14px;
+    color: #333;
 }
 
-/* Novo rodapé */
 .footer-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #f8f8f8;
-    padding: 20px;
+    padding: 10px;
 }
 
 .footer-section {
     flex: 1;
     min-width: 200px;
     margin: 10px;
-    text-align: center;
 }
 
 .footer-section h3 {
     font-size: 16px;
     margin-bottom: 10px;
-}
-
-.footer-section p {
-    font-size: 14px;
+    font-weight: bold;
 }
 
 .footer-section input {
@@ -145,12 +158,30 @@ footer {
 .footer-section button {
     margin-top: 5px;
     padding: 5px 10px;
+    border: none;
+    background-color: black;
+    color: white;
     cursor: pointer;
+    border-radius: 3px;
+}
+
+.footer-section button:hover {
+    background-color: grey;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     .header-logo {
         width: 120px;
+        top: 5px;
+    }
+
+    .menu-toggle {
+        top: 10px;
+        left: 10px;
+    }
+
+    .sidebar {
+        width: 200px;
     }
 }
