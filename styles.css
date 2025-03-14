@@ -62,6 +62,22 @@
     left: 0;
 }
 
+/* Estilização do logo fixo no topo */
+.header-logo {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+/* Esconder logo ao fazer scroll */
+body.scrolled .header-logo {
+    opacity: 0;
+}
+
 /* Conteúdo principal */
 main {
     min-height: calc(100vh - 100px); /* Ajuste conforme necessário */
@@ -69,6 +85,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 /* Garante que o rodapé fica no final da página */
@@ -80,17 +97,6 @@ body {
 
 footer {
     margin-top: auto;
-}
-
-/* Correção aplicada ao h1 */
-main h1 {
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-}
-
-/* Logo central */
-.center-logo img {
-    width: 150px;
-    margin-bottom: 20px;
 }
 
 /* Rodapé */
@@ -143,7 +149,7 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .center-logo img {
+    .header-logo {
         width: 120px;
     }
 }
