@@ -102,6 +102,30 @@ main {
     margin-bottom: 20px;
 }
 
+/* Estilização correta dos links do menu */
+.sidebar ul {
+    list-style: none; /* Remover os pontos da lista */
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.sidebar ul li a:hover {
+    color: grey;
+}
+
 /* Rodapé */
 footer {
     margin-top: auto;
@@ -128,7 +152,7 @@ footer {
     text-align: left;
 }
 
-/* Remover os pontos antes dos links */
+/* Remover os pontos antes dos links do rodapé */
 .footer-section ul {
     list-style-type: none;
     padding: 0;
