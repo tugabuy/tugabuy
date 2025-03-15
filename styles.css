@@ -102,9 +102,9 @@ main {
     margin-bottom: 20px;
 }
 
-/* Estilização correta dos links do menu */
+/* Estilização dos links do menu */
 .sidebar ul {
-    list-style: none; /* Remover os pontos da lista */
+    list-style: none; /* Remove os pontos antes dos itens */
     padding: 0;
     text-align: center;
     width: 100%;
@@ -149,41 +149,4 @@ footer {
     flex: 1;
     min-width: 200px;
     margin: 10px;
-    text-align: left;
-}
-
-/* Remover os pontos antes dos links do rodapé */
-.footer-section ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-/* Estilização dos títulos do rodapé */
-.footer-section h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-/* Input da Newsletter */
-.footer-section input {
-    width: 80%;
-    padding: 5px;
-    margin-top: 5px;
-}
-
-/* Botão da Newsletter */
-.footer-section button {
-    margin-top: 5px;
-    padding: 5px 10px;
-    border: none;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    border-radius: 3px;
-}
-
-/* Efeito hover no botão */
-.footer-section button:hover {
-    background-color: grey;
-}
+    text-ali
