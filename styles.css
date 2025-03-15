@@ -154,8 +154,9 @@ footer {
 
 /* Remover os pontos antes dos links */
 .footer-section ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 /* Estilização dos títulos do rodapé */
