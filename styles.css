@@ -102,6 +102,30 @@ main {
     margin-bottom: 20px;
 }
 
+/* Estilização dos links do menu */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.sidebar ul li a:hover {
+    color: grey;
+}
+
 /* Rodapé */
 footer {
     margin-top: auto;
@@ -112,7 +136,6 @@ footer {
     color: #333;
 }
 
-/* Container do rodapé */
 .footer-container {
     display: flex;
     flex-wrap: wrap;
@@ -120,28 +143,24 @@ footer {
     padding: 10px;
 }
 
-/* Seções do rodapé */
 .footer-section {
     flex: 1;
     min-width: 200px;
     margin: 10px;
 }
 
-/* Títulos das seções do rodapé */
 .footer-section h3 {
     font-size: 16px;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-/* Input da Newsletter */
 .footer-section input {
     width: 80%;
     padding: 5px;
     margin-top: 5px;
 }
 
-/* Botão de subscrição */
 .footer-section button {
     margin-top: 5px;
     padding: 5px 10px;
