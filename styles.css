@@ -21,26 +21,35 @@ html, body {
     overflow-x: hidden;
 }
 
-/* Ajuste do container do logo e slogan */
-.header {
-    position: relative;
-    top: 0;
+/* Container para logo e slogan */
+.logo-slogan {
+    position: fixed;
+    top: 10px; /* Ajuste para posicionamento mais alto */
     left: 50%;
     transform: translateX(-50%);
     z-index: 1500;
     text-align: center;
-    padding-top: 0; /* Garante que o logo fica mesmo colado ao topo */
+    width: 100%;
 }
 
-/* Ajuste do logo */
+/* Logo */
 .center-logo {
-    max-height: 150px; /* Garante que o logo não fica demasiado grande */
     width: auto;
+    height: auto;
+    max-height: 180px; /* Reduzido ligeiramente */
+    transition: opacity 0.3s ease-in-out;
 }
 
-/* Ajuste do slogan */
+/* Slogan */
 .slogan {
-    margin-top: 0; /* Remove qualquer espaçamento extra entre o logo e a frase */
+    transition: opacity 0.3s ease-in-out;
+    font-size: 14px; /* Ajuste opcional para melhor proporção */
+}
+
+/* Esconder ao fazer scroll */
+.hidden {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 /* Ajustar conteúdo para não ficar atrás do logo */
@@ -52,7 +61,7 @@ main {
     align-items: center;
     text-align: center;
     width: 100%;
-    padding-top: 20px;
+    padding-top: 250px; /* Ajustado para acomodar o logo menor */
 }
 
 /* Estilização do menu hambúrguer */
@@ -104,12 +113,80 @@ main {
 }
 
 .sidebar ul li {
-    padding: 10px 0;
+    margin: 15px 0;
 }
 
 .sidebar ul li a {
     text-decoration: none;
     color: black;
     font-size: 18px;
-    display: block;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.sidebar ul li a:hover {
+    color: grey;
+}
+
+/* Rodapé */
+footer {
+    margin-top: auto;
+    background: #f8f8f8;
+    padding: 15px 20px;
+    font-size: 14px;
+    color: #333;
+    width: 100%;
+}
+
+/* Estrutura do rodapé */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+/* Seções do rodapé */
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+    text-align: left;
+}
+
+/* Remover os pontos antes dos links */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilização dos títulos do rodapé */
+.footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Input da Newsletter */
+.footer-section input {
+    width: 80%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+/* Botão da Newsletter */
+.footer-section button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* Efeito hover no botão */
+.footer-section button:hover {
+    background-color: grey;
 }
