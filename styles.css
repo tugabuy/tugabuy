@@ -24,13 +24,13 @@ html, body {
 /* Container para logo e slogan */
 .logo-slogan {
     position: fixed;
-    top: 0; /* Agora colado ao topo */
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1500;
     text-align: center;
     width: 100%;
-    padding-top: 0; /* Removido qualquer espaçamento extra */
+    padding-top: 0;
 }
 
 /* Logo */
@@ -39,7 +39,7 @@ html, body {
     height: auto;
     max-height: 180px;
     transition: opacity 0.1s ease-in-out;
-    margin: 0; /* Removendo qualquer margem extra */
+    margin: 0;
     padding: 0;
 }
 
@@ -47,7 +47,7 @@ html, body {
 .slogan {
     transition: opacity 0.1s ease-in-out;
     font-size: 14px;
-    margin-top: -10px; /* Reduzindo espaço entre logo e slogan */
+    margin-top: -10px;
 }
 
 /* Esconder ao fazer scroll */
@@ -65,7 +65,7 @@ main {
     align-items: center;
     text-align: center;
     width: 100%;
-    padding-top: 200px; /* Ajustado para acomodar o novo posicionamento */
+    padding-top: 200px;
 }
 
 /* Estilização do menu hambúrguer */
@@ -140,21 +140,44 @@ main {
     padding: 40px 20px;
 }
 
+/* Cada Produto */
 .product {
+    position: relative;
     text-align: center;
-}
-
-.product img {
     width: 395px;
     height: 540px;
-    object-fit: cover;
-    display: block;
-    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Fundo de Degradê atrás da imagem PNG */
+.product::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
+    border-radius: 10px;
+    z-index: -1;
+}
+
+/* Imagem do Produto */
+.product img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+}
+
+/* Nome do Produto */
 .product p {
     font-size: 16px;
     font-weight: bold;
+    margin-top: 10px;
 }
 
 /* Botão Descobrir Coleção */
