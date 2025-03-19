@@ -135,22 +135,25 @@ main {
 /* Galeria de Produtos */
 .product-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     padding: 40px 20px;
     width: 100%;
     max-width: 1200px; /* Para evitar que a galeria fique muito esticada em ecrãs grandes */
+    justify-content: center;
 }
 
 /* Cada Produto */
 .product {
     position: relative;
     text-align: center;
-    width: 395px;
+    width: 100%;
+    max-width: 395px;
     height: 540px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: auto;
 }
 
 /* Fundo de Degradê atrás da imagem PNG */
@@ -180,6 +183,24 @@ main {
     font-size: 16px;
     font-weight: bold;
     margin-top: 10px;
+}
+
+/* Ajuste para Mobile */
+@media (max-width: 768px) {
+    .product-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-gallery {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Botão Descobrir Coleção */
