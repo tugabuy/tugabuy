@@ -14,41 +14,29 @@ body {
     margin: 0;
     align-items: center;
     text-align: center;
-}
-
-/* Remover espaços extras no início */
-html, body {
     overflow-x: hidden;
 }
 
-/* Container para logo e slogan */
-.logo-container {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+/* Container do Logo e Slogan */
+.branding {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    z-index: 1500;
-    transition: opacity 0.3s ease-in-out;
+    margin-top: 20px;
 }
 
-/* Logo */
-.center-logo {
+.branding-logo {
     max-height: 200px;
+    width: auto;
 }
 
-/* Slogan */
-.slogan {
+.branding-slogan {
     margin-top: 10px;
 }
 
-/* Esconder ao fazer scroll */
-.hidden {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-/* Ajustar conteúdo para não ficar atrás do logo */
+/* Ajustar conteúdo principal */
 main {
     flex: 1;
     display: flex;
@@ -57,7 +45,7 @@ main {
     align-items: center;
     text-align: center;
     width: 100%;
-    padding-top: 300px;
+    margin-top: 20px;
 }
 
 /* Estilização do menu hambúrguer */
@@ -89,18 +77,15 @@ main {
     padding-top: 60px;
 }
 
-/* Quando ativo, o menu aparece */
 .sidebar.active {
     left: 0;
 }
 
-/* Logo do menu */
 .sidebar .sidebar-logo {
     width: 150px;
     margin-bottom: 20px;
 }
 
-/* Estilização dos links do menu */
 .sidebar ul {
     list-style: none;
     padding: 0;
@@ -134,7 +119,6 @@ footer {
     width: 100%;
 }
 
-/* Estrutura do rodapé */
 .footer-container {
     display: flex;
     flex-wrap: wrap;
@@ -142,7 +126,6 @@ footer {
     padding: 20px;
 }
 
-/* Seções do rodapé */
 .footer-section {
     flex: 1;
     min-width: 200px;
@@ -150,28 +133,24 @@ footer {
     text-align: left;
 }
 
-/* Remover os pontos antes dos links */
 .footer-section ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-/* Estilização dos títulos do rodapé */
 .footer-section h3 {
     font-size: 16px;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-/* Input da Newsletter */
 .footer-section input {
     width: 80%;
     padding: 5px;
     margin-top: 5px;
 }
 
-/* Botão da Newsletter */
 .footer-section button {
     margin-top: 5px;
     padding: 5px 10px;
@@ -182,7 +161,6 @@ footer {
     border-radius: 3px;
 }
 
-/* Efeito hover no botão */
 .footer-section button:hover {
     background-color: grey;
 }
