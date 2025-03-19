@@ -66,14 +66,14 @@ main {
 
 /* Estilização do menu hambúrguer */
 .menu-toggle {
-    position: absolute;
+    position: fixed; /* Mantém fixo para estar sempre visível */
     top: 10px;
     left: 10px;
     background: none;
     border: none;
     font-size: 24px;
     cursor: pointer;
-    z-index: 1200;
+    z-index: 2000; /* Garante que está acima de todos os elementos */
 }
 
 /* Estilização do menu lateral */
