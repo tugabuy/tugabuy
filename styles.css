@@ -38,14 +38,14 @@ html, body {
     width: auto;
     height: auto;
     max-height: 180px;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.1s ease-in-out;
     margin: 0; /* Removendo qualquer margem extra */
     padding: 0;
 }
 
 /* Slogan */
 .slogan {
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.1s ease-in-out;
     font-size: 14px;
     margin-top: -10px; /* Reduzindo espaço entre logo e slogan */
 }
@@ -89,7 +89,7 @@ main {
     height: 100vh;
     background: white;
     box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: left 0s ease-in-out;
+    transition: left 0.3s ease-in-out;
     z-index: 1800;
     display: flex;
     flex-direction: column;
