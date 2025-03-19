@@ -89,8 +89,8 @@ main {
     height: 100vh;
     background: white;
     box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: left 0.3s ease-in-out;
-    z-index: 1100;
+    transition: left 0s ease-in-out;
+    z-index: 1800;
     display: flex;
     flex-direction: column;
     align-items: center;
