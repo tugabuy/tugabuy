@@ -24,26 +24,30 @@ html, body {
 /* Container para logo e slogan */
 .logo-slogan {
     position: fixed;
-    top: 10px; /* Ajuste para posicionamento mais alto */
+    top: 0; /* Agora colado ao topo */
     left: 50%;
     transform: translateX(-50%);
     z-index: 1500;
     text-align: center;
     width: 100%;
+    padding-top: 0; /* Removido qualquer espaçamento extra */
 }
 
 /* Logo */
 .center-logo {
     width: auto;
     height: auto;
-    max-height: 180px; /* Reduzido ligeiramente */
+    max-height: 180px;
     transition: opacity 0.3s ease-in-out;
+    margin: 0; /* Removendo qualquer margem extra */
+    padding: 0;
 }
 
 /* Slogan */
 .slogan {
     transition: opacity 0.3s ease-in-out;
-    font-size: 14px; /* Ajuste opcional para melhor proporção */
+    font-size: 14px;
+    margin-top: -10px; /* Reduzindo espaço entre logo e slogan */
 }
 
 /* Esconder ao fazer scroll */
@@ -61,19 +65,19 @@ main {
     align-items: center;
     text-align: center;
     width: 100%;
-    padding-top: 250px; /* Ajustado para acomodar o logo menor */
+    padding-top: 200px; /* Ajustado para acomodar o novo posicionamento */
 }
 
 /* Estilização do menu hambúrguer */
 .menu-toggle {
-    position: fixed; /* Mantém fixo para estar sempre visível */
+    position: absolute;
     top: 10px;
     left: 10px;
     background: none;
     border: none;
     font-size: 24px;
     cursor: pointer;
-    z-index: 2000; /* Garante que está acima de todos os elementos */
+    z-index: 1200;
 }
 
 /* Estilização do menu lateral */
