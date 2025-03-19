@@ -14,29 +14,36 @@ body {
     margin: 0;
     align-items: center;
     text-align: center;
+}
+
+/* Remover espaços extras no início */
+html, body {
     overflow-x: hidden;
 }
 
-/* Container do Logo e Slogan */
-.branding {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+/* Ajuste do container do logo e slogan */
+.header {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1500;
     text-align: center;
-    margin-top: 20px;
+    padding-top: 0; /* Garante que o logo fica mesmo colado ao topo */
 }
 
-.branding-logo {
-    max-height: 200px;
+/* Ajuste do logo */
+.center-logo {
+    max-height: 150px; /* Garante que o logo não fica demasiado grande */
     width: auto;
 }
 
-.branding-slogan {
-    margin-top: 10px;
+/* Ajuste do slogan */
+.slogan {
+    margin-top: 0; /* Remove qualquer espaçamento extra entre o logo e a frase */
 }
 
-/* Ajustar conteúdo principal */
+/* Ajustar conteúdo para não ficar atrás do logo */
 main {
     flex: 1;
     display: flex;
@@ -45,7 +52,7 @@ main {
     align-items: center;
     text-align: center;
     width: 100%;
-    margin-top: 20px;
+    padding-top: 20px;
 }
 
 /* Estilização do menu hambúrguer */
@@ -77,15 +84,18 @@ main {
     padding-top: 60px;
 }
 
+/* Quando ativo, o menu aparece */
 .sidebar.active {
     left: 0;
 }
 
+/* Logo do menu */
 .sidebar .sidebar-logo {
     width: 150px;
     margin-bottom: 20px;
 }
 
+/* Estilização dos links do menu */
 .sidebar ul {
     list-style: none;
     padding: 0;
@@ -94,73 +104,65 @@ main {
 }
 
 .sidebar ul li {
-    margin: 15px 0;
+    padding: 10px 0;
 }
 
 .sidebar ul li a {
     text-decoration: none;
     color: black;
     font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
+    display: block;
 }
 
-.sidebar ul li a:hover {
-    color: grey;
-}
-
-/* Rodapé */
-footer {
-    margin-top: auto;
-    background: #f8f8f8;
-    padding: 15px 20px;
-    font-size: 14px;
-    color: #333;
-    width: 100%;
-}
-
+/* Footer */
 .footer-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    background: #f8f8f8;
     padding: 20px;
 }
 
 .footer-section {
-    flex: 1;
-    min-width: 200px;
     margin: 10px;
     text-align: left;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
 }
 
 .footer-section ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
-.footer-section h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-    font-weight: bold;
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: black;
 }
 
 .footer-section input {
-    width: 80%;
-    padding: 5px;
+    width: 100%;
+    padding: 8px;
     margin-top: 5px;
 }
 
 .footer-section button {
+    padding: 8px 12px;
     margin-top: 5px;
-    padding: 5px 10px;
-    border: none;
-    background-color: black;
+    background: black;
     color: white;
+    border: none;
     cursor: pointer;
-    border-radius: 3px;
 }
 
-.footer-section button:hover {
-    background-color: grey;
+/* Ajuste final para garantir alinhamento correto */
+footer p {
+    text-align: center;
+    margin-top: 10px;
 }
