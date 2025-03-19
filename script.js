@@ -9,12 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
         sidebar.classList.toggle("active");
     });
 
-    // Fechar o menu ao clicar fora dele, sem conflito com a abertura
+    // Fechar o menu ao clicar fora dele
     document.addEventListener("click", function (event) {
-        if (!sidebar.contains(event.target) && event.target !== menuToggle) {
-            setTimeout(() => {
-                sidebar.classList.remove("active");
-            }, 100);
+        if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
+            sidebar.classList.remove("active");
         }
     });
 
