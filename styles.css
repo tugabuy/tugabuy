@@ -21,27 +21,25 @@ html, body {
     overflow-x: hidden;
 }
 
-/* Logo fixo no topo */
-.center-logo {
+/* Container para logo e slogan */
+.logo-container {
     position: fixed;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    width: auto;
-    height: auto;
-    max-height: 200px;
+    text-align: center;
     z-index: 1500;
     transition: opacity 0.3s ease-in-out;
 }
 
+/* Logo */
+.center-logo {
+    max-height: 200px;
+}
+
 /* Slogan */
 .slogan {
-    position: fixed;
-    top: 230px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1400;
-    transition: opacity 0.3s ease-in-out;
+    margin-top: 10px;
 }
 
 /* Esconder ao fazer scroll */
@@ -104,7 +102,7 @@ main {
 
 /* Estilização dos links do menu */
 .sidebar ul {
-    list-style: none; /* Remove os pontos antes dos itens */
+    list-style: none;
     padding: 0;
     text-align: center;
     width: 100%;
