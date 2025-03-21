@@ -149,12 +149,17 @@ main {
     text-align: center;
     width: 100%;
     max-width: 395px;
-    height: auto;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     margin: auto;
+}
+
+/* Garantir que todos os produtos tenham a mesma altura */
+.product {
+    min-height: 450px; /* Ajusta conforme necessário */
 }
 
 /* Fundo de Degradê atrás da imagem PNG */
@@ -174,6 +179,7 @@ main {
 .product img {
     width: 100%;
     height: auto;
+    max-height: 250px; /* Uniformiza a altura das imagens */
     object-fit: contain;
     position: relative;
     z-index: 1;
@@ -184,6 +190,11 @@ main {
     font-size: 16px;
     font-weight: bold;
     margin-top: 10px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 /* Ajuste para Mobile */
