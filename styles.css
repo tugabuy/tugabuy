@@ -189,19 +189,13 @@ main {
 /* Ajuste para Mobile */
 @media (max-width: 1024px) {
     .product-gallery {
-        grid-template-columns: repeat(3, 1fr); /* 3 colunas em tablets */
+        grid-template-columns: repeat(4, 1fr); /* Mantém 4 colunas em tablets */
     }
 }
 
 @media (max-width: 768px) {
     .product-gallery {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas em mobile */
-    }
-}
-
-@media (max-width: 480px) {
-    .product-gallery {
-        grid-template-columns: 1fr; /* 1 coluna em ecrãs muito pequenos */
+        grid-template-columns: repeat(2, 1fr); /* Sempre 2 colunas em mobile */
     }
 }
 
