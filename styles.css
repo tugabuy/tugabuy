@@ -27,10 +27,11 @@ html, body {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1500;
+    z-index: 2000; /* Aumentado para garantir que fique acima do vídeo */
     text-align: center;
     width: 100%;
     padding-top: 0;
+    background: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para melhor visibilidade */
 }
 
 /* Logo */
@@ -295,6 +296,7 @@ footer {
     width: 100%;
     height: 90vh;
     overflow: hidden;
+    z-index: 1000; /* Diminuído para garantir que fique abaixo do logo */
 }
 
 /* Vídeos dentro do Slider */
