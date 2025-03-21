@@ -27,11 +27,11 @@ html, body {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 2000; /* Aumentado para garantir que fique acima do vídeo */
+    z-index: 2000;
     text-align: center;
     width: 100%;
     padding-top: 0;
-    background: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para melhor visibilidade */
+    background: rgba(255, 255, 255, 0.8);
 }
 
 /* Logo */
@@ -136,7 +136,7 @@ main {
 /* Galeria de Produtos */
 .product-gallery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 colunas no desktop */
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 40px 20px;
     width: 100%;
@@ -160,7 +160,7 @@ main {
 
 /* Garantir que todos os produtos tenham a mesma altura */
 .product {
-    min-height: 450px; /* Ajusta conforme necessário */
+    min-height: 450px;
 }
 
 /* Fundo de Degradê atrás da imagem PNG */
@@ -171,7 +171,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 1)); /* Preto mais suave para branco */
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 1));
     border-radius: 10px;
     z-index: -1;
 }
@@ -180,8 +180,8 @@ main {
 .product img {
     width: 100%;
     height: auto;
-    max-height: 250px; /* Mantém a altura uniforme */
-    object-fit: contain; /* Mantém proporção e encaixa a imagem */
+    max-height: 250px;
+    object-fit: contain;
     display: block;
     margin: auto;
 }
@@ -201,13 +201,13 @@ main {
 /* Ajuste para Mobile */
 @media (max-width: 1024px) {
     .product-gallery {
-        grid-template-columns: repeat(4, 1fr); /* Mantém 4 colunas em tablets */
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
 @media (max-width: 768px) {
     .product-gallery {
-        grid-template-columns: repeat(2, 1fr); /* Sempre 2 colunas em mobile */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -292,20 +292,23 @@ footer {
 
 /* Secção de Vídeos */
 .video-slider {
-    position: relative;
-    width: 100vw; /* Ocupa toda a largura do ecrã */
-    height: 90vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
     z-index: 1000;
-    left: 0;
 }
 
-/* Vídeos dentro do Slider */
 .video-slider video {
     position: absolute;
-    width: 100vw; /* Garante que o vídeo ocupa todo o ecrã */
-    height: 100%;
-    object-fit: cover; /* Mantém a proporção do vídeo */
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
 }
@@ -314,7 +317,6 @@ footer {
 .video-slider .video.active {
     opacity: 1;
 }
-
 
 /* Ajuste para Mobile */
 @media (max-width: 768px) {
