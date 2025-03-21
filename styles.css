@@ -139,7 +139,7 @@ main {
     gap: 20px;
     padding: 40px 20px;
     width: 100%;
-    max-width: 1200px; /* Para evitar que a galeria fique muito esticada em ecrãs grandes */
+    max-width: 1200px;
     justify-content: center;
 }
 
