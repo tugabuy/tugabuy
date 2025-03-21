@@ -293,18 +293,19 @@ footer {
 /* Secção de Vídeos */
 .video-slider {
     position: relative;
-    width: 100%;
+    width: 100vw; /* Ocupa toda a largura do ecrã */
     height: 90vh;
     overflow: hidden;
-    z-index: 1000; /* Diminuído para garantir que fique abaixo do logo */
+    z-index: 1000;
+    left: 0;
 }
 
 /* Vídeos dentro do Slider */
 .video-slider video {
     position: absolute;
-    width: 100%;
+    width: 100vw; /* Garante que o vídeo ocupa todo o ecrã */
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Mantém a proporção do vídeo */
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
 }
@@ -313,6 +314,7 @@ footer {
 .video-slider .video.active {
     opacity: 1;
 }
+
 
 /* Ajuste para Mobile */
 @media (max-width: 768px) {
