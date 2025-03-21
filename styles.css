@@ -1,323 +1,124 @@
-/* Reset básico */
+/* Reset geral */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilização do body */
+/* Corpo da página */
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    align-items: center;
-    text-align: center;
+    background-color: #fff;
+    color: #000;
 }
 
-/* Remover espaços extras no início */
-html, body {
-    overflow-x: hidden;
-}
-
-/* Container para logo e slogan */
-.logo-slogan {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2000;
-    text-align: center;
-    width: 100%;
-    padding-top: 0;
-    background: rgba(255, 255, 255, 0.8);
-}
-
-/* Logo */
-.center-logo {
-    width: auto;
-    height: auto;
-    max-height: 180px;
-    transition: opacity 0.1s ease-in-out;
-    margin: 0;
-    padding: 0;
-}
-
-/* Slogan */
-.slogan {
-    transition: opacity 0.1s ease-in-out;
-    font-size: 14px;
-    margin-top: -10px;
-}
-
-/* Esconder ao fazer scroll */
-.hidden {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-/* Ajustar conteúdo para não ficar atrás do logo */
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    padding-top: 200px;
-}
-
-/* Estilização do menu hambúrguer */
-.menu-toggle {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1800;
-}
-
-/* Estilização do menu lateral */
+/* MENU LATERAL */
 .sidebar {
     position: fixed;
+    left: 0;
     top: 0;
-    left: -250px;
     width: 250px;
-    height: 100vh;
-    background: white;
-    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: left 0.3s ease-in-out;
-    z-index: 1800;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 60px;
+    height: 100%;
+    background-color: #111;
+    padding-top: 20px;
 }
 
-/* Quando ativo, o menu aparece */
-.sidebar.active {
-    left: 0;
-}
-
-/* Logo do menu */
-.sidebar .sidebar-logo {
+.sidebar-logo {
+    display: block;
+    margin: 0 auto 20px;
     width: 150px;
-    margin-bottom: 20px;
 }
 
-/* Estilização dos links do menu */
-.sidebar ul {
-    list-style: none;
+.menu {
+    list-style-type: none;
     padding: 0;
-    text-align: center;
-    width: 100%;
 }
 
-.sidebar ul li {
-    margin: 15px 0;
+.menu li {
+    padding: 10px;
 }
 
-.sidebar ul li a {
+.menu li a {
+    color: #fff;
     text-decoration: none;
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
+    display: block;
 }
 
-.sidebar ul li a:hover {
-    color: grey;
+/* BOTÃO MENU */
+.menu-toggle {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 24px;
+    cursor: pointer;
 }
 
-/* Galeria de Produtos */
-.product-gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 40px 20px;
-    width: 100%;
-    max-width: 1200px;
-    justify-content: center;
-}
-
-/* Cada Produto */
-.product {
-    position: relative;
+/* HEADER */
+.header {
     text-align: center;
-    width: 100%;
-    max-width: 395px;
-    height: 100%;
+    margin-top: 20px;
+}
+
+.logo-slogan {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    margin: auto;
 }
 
-/* Garantir que todos os produtos tenham a mesma altura */
-.product {
-    min-height: 450px;
+.center-logo {
+    width: 180px;
+    margin-bottom: 10px;
 }
 
-/* Fundo de Degradê atrás da imagem PNG */
-.product::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+/* VIDEO SLIDER */
+.video-slider {
     width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 1));
-    border-radius: 10px;
-    z-index: -1;
+    overflow: hidden;
+    position: relative;
 }
 
-/* Imagem do Produto */
-.product img {
+.video {
     width: 100%;
     height: auto;
-    max-height: 250px;
-    object-fit: contain;
-    display: block;
-    margin: auto;
 }
 
-/* Nome do Produto */
-.product p {
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 10px;
-    min-height: 40px;
+/* GALERIA DE PRODUTOS */
+.product-gallery {
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-}
-
-/* Ajuste para Mobile */
-@media (max-width: 1024px) {
-    .product-gallery {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .product-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Botão Descobrir Coleção */
-.discover-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: 2px solid black;
-    background: white;
-    cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-}
-
-.discover-button:hover {
-    background: black;
-    color: white;
-}
-
-/* Rodapé */
-footer {
-    margin-top: auto;
-    background: #f8f8f8;
-    padding: 15px 20px;
-    font-size: 14px;
-    color: #333;
-    width: 100%;
-}
-
-/* Estrutura do rodapé */
-.footer-container {
-    display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    gap: 20px;
     padding: 20px;
 }
 
-/* Seções do rodapé */
-.footer-section {
-    flex: 1;
-    min-width: 200px;
-    margin: 10px;
-    text-align: left;
+.product {
+    text-align: center;
 }
 
-/* Remover os pontos antes dos links */
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* Estilização dos títulos do rodapé */
-.footer-section h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-/* Input da Newsletter */
-.footer-section input {
-    width: 80%;
-    padding: 5px;
-    margin-top: 5px;
-}
-
-/* Botão da Newsletter */
-.footer-section button {
-    margin-top: 5px;
-    padding: 5px 10px;
-    border: none;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    border-radius: 3px;
-}
-
-/* Efeito hover no botão */
-.footer-section button:hover {
-    background-color: grey;
-}
-
-/* Secção de Vídeos */
-.video-slider {
-    position: relative;
-    width: 100%;
-    max-height: 500px;
-    overflow: hidden;
-    z-index: 1;
-}
-
-/* Ajustar o vídeo para não cobrir toda a página */
-.video-slider video {
-    width: 100%;
+.product img {
+    width: 200px;
     height: auto;
-    max-height: 500px;
-    object-fit: cover;
+}
+
+/* BOTÃO DESCUBRA */
+.discover-button {
     display: block;
-    margin: 0 auto;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
 }
 
-/* Garantir que o menu e o restante conteúdo estão acima do vídeo */
-.logo-slogan, .sidebar, main, footer {
-    position: relative;
-    z-index: 2;
-}
-
-/* Ajuste para Mobile */
-@media (max-width: 768px) {
-    .video-slider {
-        max-height: 300px;
-    }
+/* RODAPÉ */
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
