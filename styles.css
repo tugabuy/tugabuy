@@ -11,7 +11,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: 0;
     align-items: center;
     text-align: center;
 }
@@ -30,43 +29,29 @@ html, body {
     z-index: 2000;
     text-align: center;
     width: 100%;
-    padding-top: 0;
     background: rgba(255, 255, 255, 0.8);
+    padding: 10px 0;
 }
 
-/* Logo */
-.center-logo {
-    width: auto;
-    height: auto;
-    max-height: 180px;
-    transition: opacity 0.1s ease-in-out;
-    margin: 0;
-    padding: 0;
+/* Ajustar espaço do conteúdo para evitar sobreposição */
+.video-slider {
+    margin-top: 180px;
 }
 
-/* Slogan */
-.slogan {
-    transition: opacity 0.1s ease-in-out;
-    font-size: 14px;
-    margin-top: -10px;
+/* Ajustar altura do vídeo */
+.video-slider {
+    max-height: 400px;
 }
 
-/* Esconder ao fazer scroll */
-.hidden {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-/* Ajustar conteúdo para não ficar atrás do logo */
+/* Ajustar conteúdo principal */
 main {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     width: 100%;
-    padding-top: 200px;
+    padding-top: 120px;
 }
 
 /* Estilização do menu hambúrguer */
@@ -74,14 +59,12 @@ main {
     position: absolute;
     top: 10px;
     left: 10px;
-    background: none;
-    border: none;
     font-size: 24px;
     cursor: pointer;
     z-index: 1800;
 }
 
-/* Estilização do menu lateral */
+/* Menu lateral */
 .sidebar {
     position: fixed;
     top: 0;
@@ -92,45 +75,27 @@ main {
     box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
     transition: left 0.3s ease-in-out;
     z-index: 1800;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 60px;
 }
 
-/* Quando ativo, o menu aparece */
-.sidebar.active {
-    left: 0;
+.sidebar-logo {
+    width: 80%;
+    margin: 20px auto;
+    display: block;
 }
 
-/* Logo do menu */
-.sidebar .sidebar-logo {
-    width: 150px;
-    margin-bottom: 20px;
-}
-
-/* Estilização dos links do menu */
-.sidebar ul {
+.menu {
     list-style: none;
-    padding: 0;
-    text-align: center;
-    width: 100%;
+    padding: 20px;
 }
 
-.sidebar ul li {
-    margin: 15px 0;
+.menu li {
+    padding: 10px 0;
 }
 
-.sidebar ul li a {
+.menu a {
     text-decoration: none;
     color: black;
     font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-}
-
-.sidebar ul li a:hover {
-    color: grey;
 }
 
 /* Galeria de Produtos */
@@ -139,92 +104,33 @@ main {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 40px 20px;
-    width: 100%;
     max-width: 1200px;
-    justify-content: center;
 }
 
-/* Cada Produto */
-.product {
-    position: relative;
-    text-align: center;
-    width: 100%;
-    max-width: 395px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin: auto;
-}
-
-/* Garantir que todos os produtos tenham a mesma altura */
-.product {
-    min-height: 450px;
-}
-
-/* Fundo de Degradê atrás da imagem PNG */
-.product::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 1));
-    border-radius: 10px;
-    z-index: -1;
-}
-
-/* Imagem do Produto */
 .product img {
     width: 100%;
-    height: auto;
-    max-height: 250px;
-    object-fit: contain;
-    display: block;
-    margin: auto;
+    border-radius: 10px;
 }
 
-/* Nome do Produto */
 .product p {
-    font-size: 16px;
-    font-weight: bold;
     margin-top: 10px;
-    min-height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    font-size: 16px;
 }
 
-/* Ajuste para Mobile */
-@media (max-width: 1024px) {
-    .product-gallery {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .product-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Botão Descobrir Coleção */
+/* Botão "Descobre a Coleção" */
 .discover-button {
     margin-top: 20px;
     padding: 10px 20px;
-    font-size: 16px;
-    border: 2px solid black;
-    background: white;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    border: none;
     cursor: pointer;
-    transition: background 0.3s, color 0.3s;
+    border-radius: 5px;
 }
 
 .discover-button:hover {
-    background: black;
-    color: white;
+    background-color: #444;
 }
 
 /* Rodapé */
@@ -233,91 +139,61 @@ footer {
     background: #f8f8f8;
     padding: 15px 20px;
     font-size: 14px;
-    color: #333;
     width: 100%;
 }
 
-/* Estrutura do rodapé */
 .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
     padding: 20px;
-}
-
-/* Seções do rodapé */
-.footer-section {
-    flex: 1;
-    min-width: 200px;
-    margin: 10px;
     text-align: left;
 }
 
-/* Remover os pontos antes dos links */
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* Estilização dos títulos do rodapé */
 .footer-section h3 {
     font-size: 16px;
     margin-bottom: 10px;
-    font-weight: bold;
 }
 
-/* Input da Newsletter */
-.footer-section input {
-    width: 80%;
-    padding: 5px;
-    margin-top: 5px;
+.footer-section ul {
+    list-style: none;
+    padding: 0;
 }
 
-/* Botão da Newsletter */
-.footer-section button {
-    margin-top: 5px;
-    padding: 5px 10px;
-    border: none;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    border-radius: 3px;
+.footer-section ul li {
+    margin-bottom: 8px;
 }
 
-/* Efeito hover no botão */
-.footer-section button:hover {
-    background-color: grey;
-}
-
-/* Secção de Vídeos */
-.video-slider {
-    position: relative;
-    width: 100%;
-    max-height: 500px;
-    overflow: hidden;
-    z-index: 1;
-}
-
-/* Ajustar o vídeo para não cobrir toda a página */
-.video-slider video {
-    width: 100%;
-    height: auto;
-    max-height: 500px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Garantir que o menu e o restante conteúdo estão acima do vídeo */
-.logo-slogan, .sidebar, main, footer {
-    position: relative;
-    z-index: 2;
+.footer-section a {
+    text-decoration: none;
+    color: black;
 }
 
 /* Ajuste para Mobile */
+@media (max-width: 1024px) {
+    .product-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
+    .product-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logo-slogan {
+        position: static;
+        transform: none;
+        padding: 20px 0;
+    }
+
     .video-slider {
-        max-height: 300px;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-gallery {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
