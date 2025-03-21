@@ -26,4 +26,16 @@ document.addEventListener("DOMContentLoaded", function () {
             slogan.classList.remove("hidden");
         }
     });
+
+    // Alternar entre os vídeos do slider
+    const videos = document.querySelectorAll(".video-slider .video");
+    let currentIndex = 0;
+
+    function switchVideo() {
+        videos[currentIndex].classList.remove("active");
+        currentIndex = (currentIndex + 1) % videos.length;
+        videos[currentIndex].classList.add("active");
+    }
+
+    setInterval(switchVideo, 8000); // Mudar vídeo a cada 8 segundos
 });
