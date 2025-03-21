@@ -179,10 +179,10 @@ main {
 .product img {
     width: 100%;
     height: auto;
-    max-height: 250px; /* Uniformiza a altura das imagens */
-    object-fit: contain;
-    position: relative;
-    z-index: 1;
+    max-height: 250px; /* Mantém a altura uniforme */
+    object-fit: contain; /* Mantém proporção e encaixa a imagem */
+    display: block;
+    margin: auto;
 }
 
 /* Nome do Produto */
