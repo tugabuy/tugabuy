@@ -288,3 +288,33 @@ footer {
 .footer-section button:hover {
     background-color: grey;
 }
+
+/* Secção de Vídeos */
+.video-slider {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+/* Vídeos dentro do Slider */
+.video-slider video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+/* Vídeo ativo */
+.video-slider .video.active {
+    opacity: 1;
+}
+
+/* Ajuste para Mobile */
+@media (max-width: 768px) {
+    .video-slider {
+        height: 60vh;
+    }
+}
