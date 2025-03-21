@@ -15,11 +15,6 @@ body {
     text-align: center;
 }
 
-/* Remover espaços extras no início */
-html, body {
-    overflow-x: hidden;
-}
-
 /* Container para logo e slogan */
 .logo-slogan {
     position: fixed;
@@ -33,38 +28,30 @@ html, body {
     padding: 10px 0;
 }
 
-/* Ajustar espaço do conteúdo para evitar sobreposição */
-.video-slider {
-    margin-top: 180px;
+/* Logo */
+.center-logo {
+    max-height: 180px;
 }
 
-/* Ajustar altura do vídeo */
-.video-slider {
-    max-height: 400px;
+/* Slogan */
+.slogan {
+    font-size: 14px;
+    margin-top: -10px;
 }
 
-/* Ajustar conteúdo principal */
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding-top: 120px;
-}
-
-/* Estilização do menu hambúrguer */
+/* Menu Hambúrguer */
 .menu-toggle {
     position: absolute;
     top: 10px;
     left: 10px;
+    background: none;
+    border: none;
     font-size: 24px;
     cursor: pointer;
     z-index: 1800;
 }
 
-/* Menu lateral */
+/* Menu Lateral */
 .sidebar {
     position: fixed;
     top: 0;
@@ -75,21 +62,23 @@ main {
     box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
     transition: left 0.3s ease-in-out;
     z-index: 1800;
+    padding-top: 20px;
 }
 
 .sidebar-logo {
-    width: 80%;
-    margin: 20px auto;
+    width: 150px;
     display: block;
+    margin: 0 auto 20px;
 }
 
 .menu {
     list-style: none;
-    padding: 20px;
+    padding: 0;
+    text-align: center;
 }
 
 .menu li {
-    padding: 10px 0;
+    margin: 20px 0;
 }
 
 .menu a {
@@ -104,54 +93,57 @@ main {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 40px 20px;
+    width: 100%;
     max-width: 1200px;
 }
 
 .product img {
     width: 100%;
-    border-radius: 10px;
+    height: auto;
 }
 
-.product p {
-    margin-top: 10px;
-    font-size: 16px;
-}
-
-/* Botão "Descobre a Coleção" */
+/* Botão de Descoberta */
 .discover-button {
-    margin-top: 20px;
+    background: black;
+    color: white;
     padding: 10px 20px;
     font-size: 18px;
-    background-color: black;
-    color: white;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    margin-top: 20px;
 }
 
-.discover-button:hover {
-    background-color: #444;
+/* Secção de Vídeos */
+.video-slider {
+    position: relative;
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.video-container {
+    display: flex;
+    width: 200%;
+    animation: slide 10s infinite alternate;
+}
+
+.video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 /* Rodapé */
-footer {
-    margin-top: auto;
-    background: #f8f8f8;
-    padding: 15px 20px;
-    font-size: 14px;
-    width: 100%;
-}
-
 .footer-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    padding: 20px;
-    text-align: left;
+    padding: 40px 20px;
+    background: #f4f4f4;
 }
 
 .footer-section h3 {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 10px;
 }
 
@@ -161,39 +153,33 @@ footer {
 }
 
 .footer-section ul li {
-    margin-bottom: 8px;
+    margin: 5px 0;
 }
 
-.footer-section a {
+.footer-section ul li a {
     text-decoration: none;
     color: black;
 }
 
-/* Ajuste para Mobile */
-@media (max-width: 1024px) {
-    .product-gallery {
-        grid-template-columns: repeat(3, 1fr);
-    }
+.footer-section input {
+    width: 100%;
+    padding: 5px;
 }
 
-@media (max-width: 768px) {
-    .product-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .logo-slogan {
-        position: static;
-        transform: none;
-        padding: 20px 0;
-    }
-
-    .video-slider {
-        margin-top: 0;
-    }
+.footer-section button {
+    background: black;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
 }
 
-@media (max-width: 480px) {
-    .product-gallery {
-        grid-template-columns: repeat(1, 1fr);
-    }
+.footer-section p {
+    margin-top: 10px;
+}
+
+/* Animação do Slideshow */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
