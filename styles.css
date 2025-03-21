@@ -292,13 +292,13 @@ footer {
 
 /* Secção de Vídeos */
 .video-slider {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    z-index: -1; /* Coloca o vídeo no fundo */
+    z-index: 1000;
 }
 
 .video-slider video {
@@ -316,12 +316,6 @@ footer {
 /* Vídeo ativo */
 .video-slider .video.active {
     opacity: 1;
-}
-
-/* Garantir que o menu e catálogo ficam acima */
-.logo-slogan, .sidebar, .product-gallery {
-    position: relative;
-    z-index: 10;
 }
 
 /* Ajuste para Mobile */
